@@ -1,0 +1,22 @@
+* {
+    font-family: 'Montserrat', sans-serif; /* Default global font */
+    h1, h2, h3, h4, h5, h6 {
+        font-family: 'Bitter', serif; /* Font for headings */
+    }
+}
+
+body {
+    background-color: #f9f9fc;
+}
+.blogs {
+    background-color: #ffffff;
+}
+
+.hero {
+    background-color: #ffffff;
+}
+
+.footer {
+    background-color: #097969;
+    padding-bottom: 20px;
+}

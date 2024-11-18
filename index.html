@@ -1,0 +1,641 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="Questence Homepage"
+        content="Build skills with courses, certificates, and programmes online from world-class trainers and institutions" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Bitter:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet" />
+    <link rel="stylesheet" href="./public/style.css" type="text/css" />
+    <title>GetDev</title>
+    <style>
+        body {
+            font-family: 'Montserrat', sans-serif;
+            /* Default global font */
+        }
+
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6 {
+            font-family: 'Bitter', serif;
+            /* Font for headings */
+        }
+
+        .svgLoader {
+            animation: spin .5s linear infinite;
+            margin: auto
+        }
+
+        .divLoader {
+            width: 100vw;
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            z-index: 9999
+        }
+
+        @keyframes spin {
+            0% {
+                transform: rotate(0)
+            }
+
+            100% {
+                transform: rotate(360deg)
+            }
+        }
+    </style>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body>
+    <header class="absolute inset-x-0 top-0 z-50">
+        <nav class="flex items-center justify-between p-6 lg:px-8 shadow-md" aria-label="Global">
+            <!-- Logo Box-->
+            <div class="flex lg:flex-1">
+                <a href="#" class="-m-1.5 p-1.5">
+                    <h4 class="md:text-lg lg:text-xl font-semibold text-green-900">GetDev</h4>
+                </a>
+            </div>
+
+            <!-- Hamburger Button -->
+            <div class="flex lg:hidden">
+                <button
+                    id="mobile-menu-toggle"
+                    type="button"
+                    class="-m-2.5 inline-flex items-center justify-center rounded-md p-2.5 text-gray-700"
+                    aria-controls="mobile-menu"
+                    aria-expanded="false"
+                >
+                    <span class="sr-only">Open main menu</span>
+                    <svg
+                        class="h-6 w-6"
+                        xmlns="http://www.w3.org/2000/svg"
+                        fill="none"
+                        viewBox="0 0 24 24"
+                        stroke="currentColor"
+                        aria-hidden="true"
+                    >
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+                    </svg>
+                </button>
+            </div>
+
+            <!-- Desktop Navigation -->
+            <div class="hidden lg:flex lg:gap-x-12">
+                                <div class="relative group">
+                    <!-- Main Menu Button -->
+                    <button type="button" class="inline-flex items-center gap-x-1 text-sm/6 font-semibold text-gray-900" aria-expanded="false">
+                        <a href="#" class="text-sm/6 font-normal text-gray-900">Courses</a>
+                        <svg class="size-5" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+                            <path
+                                fill-rule="evenodd"
+                                d="M5.22 8.22a.75.75 0 0 1 1.06 0L10 11.94l3.72-3.72a.75.75 0 1 1 1.06 1.06l-4.25 4.25a.75.75 0 0 1-1.06 0L5.22 9.28a.75.75 0 0 1 0-1.06Z"
+                                clip-rule="evenodd"
+                            />
+                        </svg>
+                    </button>
+                    <!-- Main Submenu -->
+                    <div class="group absolute left-1/2 z-10 mt-2 hidden w-screen max-w-md -translate-x-1/2 px-4 opacity-0 transition-all duration-200 ease-out group-hover:block group-hover:opacity-100">    
+                        <div class="w-screen max-w-md flex-auto overflow-hidden rounded-3xl bg-white text-sm shadow-lg ring-1 ring-gray-900/5">
+                        <div class="p-4">
+                            <!-- First Menu Item with Inner Submenu -->
+                            <div class="group relative flex gap-x-6 rounded-lg p-4 hover:bg-gray-50">
+                            <div class="mt-1 flex size-11 flex-none items-center justify-center rounded-lg bg-gray-50 group-hover:bg-white">
+                                <svg class="size-6 text-gray-600 group-hover:text-green-600" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true" data-slot="icon">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M10.5 6a7.5 7.5 0 1 0 7.5 7.5h-7.5V6Z" />
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M13.5 10.5H21A7.5 7.5 0 0 0 13.5 3v7.5Z" />
+                                </svg>
+                            </div>
+                            <div>
+                                <a href="#" class="font-normal text-gray-900">
+                                Analytics
+                                <span class="absolute inset-0"></span>
+                                </a>
+                                <p class="mt-1 text-gray-600">Get a better understanding of your traffic</p>
+
+                                <!-- Inner Submenu -->
+                                <!-- <div class="absolute left-full top-0 hidden w-64 p-4 bg-white rounded-lg shadow-lg group-hover:block">
+                                <div class="flex flex-col space-y-2">
+                                    <a href="#" class="text-gray-900 hover:text-green-600">
+                                    Submenu Option 1
+                                    </a>
+                                    <a href="#" class="text-gray-900 hover:text-green-600">
+                                    Submenu Option 2
+                                    </a>
+                                    <a href="#" class="text-gray-900 hover:text-green-600">
+                                    Submenu Option 3
+                                    </a>
+                                </div>
+                                </div> -->
+                            </div>
+                            </div>
+
+                            <!-- Other Menu Items -->
+                            <div class="group relative flex gap-x-6 rounded-lg p-4 hover:bg-gray-50">
+                            <div class="mt-1 flex size-11 flex-none items-center justify-center rounded-lg bg-gray-50 group-hover:bg-white">
+                                <svg class="size-6 text-gray-600 group-hover:text-green-600" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true" data-slot="icon">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M15.042 21.672 13.684 16.6m0 0-2.51 2.225.569-9.47 5.227 7.917-3.286-.672ZM12 2.25V4.5m5.834.166-1.591 1.591M20.25 10.5H18M7.757 14.743l-1.59 1.59M6 10.5H3.75m4.007-4.243-1.59-1.59" />
+                                </svg>
+                            </div>
+                            <div>
+                                <a href="#" class="font-normal text-gray-900">
+                                Engagement
+                                <span class="absolute inset-0"></span>
+                                </a>
+                                <p class="mt-1 text-gray-600">Speak directly to your customers</p>
+                            </div>
+                            </div>
+                        </div>
+                        </div>
+                    </div>
+                </div>
+                <a href="#" class="text-sm/6 font-normal text-green-900">Programmes</a>
+                <a href="#" class="text-sm/6 font-normal text-green-900">Institutions</a>
+                <a href="#" class="text-sm/6 font-normal text-green-900">About Us</a>
+            </div>
+
+            <!-- Desktop Actions -->
+            <div class="hidden lg:flex lg:flex-1 lg:justify-end lg:gap-x-4">
+                <a
+                    href="#"
+                    class="border-2 rounded-full px-6 py-2 text-sm font-normal text-green-900 capitalize hover:bg-green-700 hover:text-white"
+                >
+                    Log in
+                </a>
+                <a
+                    href="#"
+                    class="border-2 rounded-full px-6 py-2 bg-green-700 text-white text-sm font-normal capitalize"
+                >
+                    Sign up
+                </a>
+            </div>
+        </nav>
+
+        <!-- Mobile Navigation -->
+        <div
+            id="mobile-menu"
+            class="hidden lg:hidden fixed inset-0 z-40 w-full bg-white px-6 py-6 overflow-y-auto sm:max-w-sm sm:ring-1 sm:ring-gray-900/10"
+            role="dialog"
+            aria-modal="true"
+        >
+            <div class="flex items-center justify-between">
+                <a href="#" class="-m-1.5 p-1.5">
+                    <h4 class="text-lg font-semibold">GetDev</h4>
+                </a>
+                <button
+                    id="mobile-menu-close"
+                    type="button"
+                    class="-m-2.5 rounded-md p-2.5 text-gray-700"
+                >
+                    <span class="sr-only">Close menu</span>
+                    <svg
+                        class="h-6 w-6"
+                        xmlns="http://www.w3.org/2000/svg"
+                        fill="none"
+                        viewBox="0 0 24 24"
+                        stroke="currentColor"
+                        aria-hidden="true"
+                    >
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
+                    </svg>
+                </button>
+            </div>
+
+            <div class="mt-6 space-y-4">
+                <a href="#" class="block text-base/7 font-normal text-green-900 hover:bg-gray-50 px-3 py-2 rounded-lg">Courses</a>
+                <a href="#" class="block text-base/7 font-normal text-green-900 hover:bg-gray-50 px-3 py-2 rounded-lg">Programmes</a>
+                <a href="#" class="block text-base/7 font-normal text-green-900 hover:bg-gray-50 px-3 py-2 rounded-lg">Institutions</a>
+                <a href="#" class="block text-base/7 font-normal text-green-900 hover:bg-gray-50 px-3 py-2 rounded-lg">About Us</a>
+            </div>
+
+            <div class="mt-6 flex flex-col gap-y-4">
+                <a
+                    href="#"
+                    class="border-2 rounded-full px-6 py-2 text-sm font-normal capitalize hover:bg-green-700 hover:text-white"
+                >
+                    Log in
+                </a>
+                <a
+                    href="#"
+                    class="border-2 rounded-full px-6 py-2 bg-green-700 text-white text-sm font-normal capitalize"
+                >
+                    Sign up
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Content -->
+    <section class="px-4 pt-4 lg:px-6 hero">
+        <div class="mx-auto max-w-7xl py-32 lg:flex lg:items-center lg:justify-between lg:gap-6">
+            <div class="max-w-2xl lg:max-w-full">
+                <h1 class="text-balance text-4xl w-full lg:w-4/3 font-semibold text-gray-900 lg:text-5xl">
+                    Accelerate your quest, learn anywhere, anytime
+                </h1>
+                <p class="mt-8 text-base font-medium text-gray-500 sm:text-xl/8">
+                    Acquire new knowledge and skills, train for certifications, diplomas, and degrees from 
+                    world-class institutions at your own pace and space.
+                </p>
+                <div class="mt-10 flex items-center gap-x-4">
+                    <button class="border-2 rounded-md px-8 py-2 hover:bg-green-700 hover:text-white">
+                        <a href="#" class="text-sm font-normal capitalize">Log in</a>
+                    </button>
+                    <button class="border-2 rounded-md px-8 py-2 bg-green-700 text-white">
+                        <a href="#" class="text-sm font-normal capitalize">Sign up</a>
+                    </button>
+                </div>
+            </div>
+            <!-- Image -->
+            <div class="mt-16 lg:mt-0 lg:flex-shrink-0">
+                <img 
+                    class="w-full max-w-[650px] h-auto object-contain lg:max-h-[500px]" 
+                    src="/public/assets/image/justdev-ipad.8c63486c.png" 
+                    alt="Placeholder image">
+            </div>
+        </div>
+    </section>
+
+    <section class="relative px-6 lg:px-8">
+        <div class="mx-auto max-w-7xl lg:flex lg:items-center lg:justify-between lg:gap-6 mb-6 pt-10">
+            <div class="w-full lg:w-4/3">
+                <h1 class="text-balance text-4xl font-semibold tracking-tight text-gray-900 lg:text-5xl">
+                    Our quest is for ways to make learning simpler:
+                </h1>
+            </div>
+            <div class="mt-5 lg:mt-0 lg:flex-shrink-0">
+                <button class="border-2 rounded-md px-12 py-3 bg-green-700 text-white">
+                    <a href="#" class="text-sm font-semibold capitalize">Learn more <span aria-hidden="true">→</span></a>
+                </button>
+            </div>
+        </div>
+        <!-- Features Section -->
+        <div class="mx-auto max-w-7xl mt-16 grid grid-cols-1 lg:grid-cols-2 gap-8">
+            <!-- Feature 1 -->
+            <div class="flex flex-col lg:flex-row items-start gap-6">
+                <div class="w-full lg:w-1/3">
+                    <img 
+                        class="rounded-lg object-cover w-full h-auto max-h-[400px]" 
+                        src="/public/assets/image/self_pace_and_instructor_led.0a14ab0c.jpg" 
+                        alt="Self Pace and Instructor-Led">
+                </div>
+                <div class="flex-1">
+                    <h2 class="font-semibold text-lg lg:text-2xl">Self Pace and Instructor-Led</h2>
+                    <hr class="my-2 border-gray-300">
+                    <p class="font-normal text-sm lg:text-lg text-gray-600">
+                        Learn anytime, anywhere, at your own pace with interactive multimedia content provided by 
+                        world-class institutions and trainers. Receive instant feedback through online exercises 
+                        and grading. Study for knowledge, professional certificates, or academic purposes and 
+                        earn a verified certificate upon completion.
+                    </p>
+                </div>
+            </div>
+
+            <!-- Feature 2 -->
+            <div class="flex flex-col lg:flex-row items-start gap-6">
+                <div class="w-full lg:w-1/3">
+                    <img 
+                        class="rounded-lg object-cover w-full h-auto max-h-[400px]" 
+                        src="/public/assets/image/recorded_and_live.09d1b2c5.jpg" 
+                        alt="Recorded and Live">
+                </div>
+                <div class="flex-1">
+                    <h2 class="font-semibold text-lg lg:text-2xl">Recorded and Live</h2>
+                    <hr class="my-2 border-gray-300">
+                    <p class="font-normal text-sm lg:text-lg text-gray-600">
+                        Every course includes recorded multimedia components such as text, images, audio, video, 
+                        downloadable materials, and interactive content. Additionally, live sessions, including 
+                        meetings and webinars through platforms like Zoom, Meet, and Webex, enrich the learning 
+                        experience.
+                    </p>
+                </div>
+            </div>
+
+            <!-- Feature 3 -->
+            <div class="flex flex-col lg:flex-row items-start gap-6">
+                <div class="w-full lg:w-1/3">
+                    <img 
+                        class="rounded-lg object-cover w-full h-auto max-h-[400px]" 
+                        src="/public/assets/image/exercise_included.54e428aa.jpg" 
+                        alt="Exercise Included">
+                </div>
+                <div class="flex-1">
+                    <h2 class="font-semibold text-lg lg:text-2xl">Exercise Included</h2>
+                    <hr class="my-2 border-gray-300">
+                    <p class="font-normal text-sm lg:text-lg text-gray-600">
+                        Exercises are included to test and certify understanding - Self Assessments, Graded Exams. 
+                        Forms are included for surveys bound to the courses to receive feedback from learners.
+                    </p>
+                </div>
+            </div>
+
+            <!-- Feature 4 -->
+            <div class="flex flex-col lg:flex-row items-start gap-6">
+                <div class="w-full lg:w-1/3">
+                    <img 
+                        class="rounded-lg object-cover w-full h-auto max-h-[400px]" 
+                        src="/public/assets/image/expert_instructors.b913d197.jpg" 
+                        alt="Expert Instructors">
+                </div>
+                <div class="flex-1">
+                    <h2 class="font-semibold text-lg lg:text-2xl">Expert Instructors</h2>
+                    <hr class="my-2 border-gray-300">
+                    <p class="font-normal text-sm lg:text-lg text-gray-600">
+                        Our courses are taught by people who have acquired degrees and certifications from recognised and world-class institutions 
+                        and have worked in their respective fields. They are accredited and experienced tutors in the areas 
+                        and fully backed by our team of professionals in eLearning and multimedia course ware development.
+                    </p>
+                </div>
+            </div>
+
+            <!-- Feature 5 -->
+            <div class="flex flex-col lg:flex-row items-start gap-6">
+                <div class="w-full lg:w-1/3">
+                    <img 
+                        class="rounded-lg object-cover w-full h-auto max-h-[400px]" 
+                        src="/public/assets/image/discuss_with_lecturers_and_others.6c8f091a.jpg" 
+                        alt="Discuss with Lecturers and Others, Set Bookmarks">
+                </div>
+                <div class="flex-1">
+                    <h2 class="font-semibold text-lg lg:text-2xl">Discuss with Lecturers and Others, Set Bookmarks</h2>
+                    <hr class="my-2 border-gray-300">
+                    <p class="font-normal text-sm lg:text-lg text-gray-600">
+                        Participate in our online forum, share thoughts and ideas, increase connection, 
+                        get help with your studies. Bookmark and add personal notes to lessons.
+                    </p>
+                </div>
+            </div>
+
+            <!-- Feature 6 -->
+            <div class="flex flex-col lg:flex-row items-start gap-6">
+                <div class="w-full lg:w-1/3">
+                    <img 
+                        class="rounded-lg object-cover w-full h-auto max-h-[400px]" 
+                        src="/public/assets/image/one_on_one_and_group_sessions.8f733ea9.jpg" 
+                        alt="1:1 and Group Sessions">
+                </div>
+                <div class="flex-1">
+                    <h2 class="font-semibold text-lg lg:text-2xl">1:1 and Group Sessions</h2>
+                    <hr class="my-2 border-gray-300">
+                    <p class="font-normal text-sm lg:text-lg text-gray-600">
+                        Either as a lesson of the course or to support a lesson, learners can schedule a one-to-one, 
+                        or group session separately with the instructor using the built-in Calendly™ integration.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="px-6 pt-4 lg:px-8 mt-20">
+        <div class="mx-auto max-w-7xl lg:flex lg:items-center lg:justify-between lg:gap-6 mb-6">
+            <div class="flex flex-col my-6">
+                <h2 class="text-balance text-4xl font-semibold tracking-tight text-gray-900 lg:text-5xl">
+                    Professional Certifications
+                </h2>
+                <h4 class="w-full mt-4 text-sm lg:text-lg font-medium text-gray-500 lg:w-md">
+                    Questence is poised to help you ace your next professional examination, 
+                    providing unparalled levels of interactivity and convenience:
+                </h4>
+            </div>
+        </div>
+        <div class="mx-auto max-w-7xl lg:flex lg:items-center lg:justify-between lg:gap-6 mb-6">
+            <div class="grid grid-flow-row auto-rows-max gap-8 grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
+                <!-- Card 01 -->
+                <div class="flex h-auto w-full lg:w-[400px] rounded-2xl border-2 border-transparent shadow-xl bg-white p-8 justify-start items-start">
+                    <div class="flex flex-col items-start space-y-2">
+                        <img class="w-[50px] max-w-full" src="./public/assets/image/cipm_wsbwcd.png" 
+                        alt="Chartered Institute of Personnel Management of Nigeria" 
+                        />
+                        <div class="font-semibold text-base">
+                            Chartered Institute of Personnel Management of Nigeria
+                        </div>
+                        <div class="font-normal text-sm">
+                            Create stunning sales pages for your courses using dozens of eye-catching templates. 
+                            No design or development skills needed
+                        </div>
+                    </div>
+                </div>
+                <!-- Card 02 -->
+                <div class="flex h-auto w-full lg:w-[400px] rounded-2xl border-2 border-transparent shadow-xl bg-white p-8 justify-start items-start">
+                    <div class="flex flex-col items-start space-y-2">
+                        <img class="w-[50px] max-w-full" src="./public/assets/image/icsan_gwhtec.jpg" 
+                        alt="Chartered Institute of Personnel Management of Nigeria" 
+                        />
+                        <div class="font-semibold text-base">
+                            Institute Of Chartered Accountants (ICAN)
+                        </div>
+                        <div class="font-normal text-sm">
+                            Create stunning sales pages for your courses using dozens of eye-catching templates. 
+                            No design or development skills needed
+                        </div>
+                    </div>
+                </div>
+                <!-- Card 03 -->
+                <div class="flex h-auto w-full lg:w-[400px] rounded-2xl border-2 border-transparent shadow-xl bg-white p-8 justify-start items-start">
+                    <div class="flex flex-col items-start space-y-2">
+                        <img class="w-[50px] max-w-full" src="./public/assets/image/cibn_xuxw1t.jpg" 
+                        alt="Chartered Institute of Personnel Management of Nigeria" 
+                        />
+                        <div class="font-semibold text-base">
+                            Chartered Institute of Bankers of Nigeria
+                        </div>
+                        <div class="font-normal text-sm">
+                            Create stunning sales pages for your courses using dozens of eye-catching templates. 
+                            No design or development skills needed
+                        </div>
+                    </div>
+                </div>
+                <!-- Card 04 -->
+                <div class="flex h-auto w-full lg:w-[400px] rounded-2xl border-2 border-transparent shadow-xl bg-white p-8 justify-start items-start">
+                    <div class="flex flex-col items-start space-y-2">
+                        <img class="w-[50px] max-w-full" src="./public/assets/image/citn_dqvovf.png" 
+                        alt="Chartered Institute of Personnel Management of Nigeria" 
+                        />
+                        <div class="font-semibold text-base">
+                            Chartered Institute of Taxation of Nigeria
+                        </div>
+                        <div class="font-normal text-sm">
+                            Create stunning sales pages for your courses using dozens of eye-catching templates. 
+                            No design or development skills needed
+                        </div>
+                    </div>
+                </div>
+                <!-- Card 05 -->
+                <div class="flex h-auto w-full lg:w-[400px] rounded-2xl border-2 border-transparent shadow-xl bg-white p-8 justify-start items-start">
+                    <div class="flex flex-col items-start space-y-2">
+                        <img class="w-[50px] max-w-full" src="./public/assets/image/anan_sqfjka.jpg" 
+                        alt="Chartered Institute of Personnel Management of Nigeria" 
+                        />
+                        <div class="font-semibold text-base">
+                            Association Of Accountants of Nigeria
+                        </div>
+                        <div class="font-normal text-sm">
+                            Create stunning sales pages for your courses using dozens of eye-catching templates. 
+                            No design or development skills needed
+                        </div>
+                    </div>
+                </div>
+                <!-- Card 06 -->
+                <div class="flex h-auto w-full lg:w-[400px] rounded-2xl border-2 border-transparent shadow-xl bg-white p-8 justify-start items-start">
+                    <div class="flex flex-col items-start space-y-2">
+                        <img class="w-[50px] max-w-full" src="./public/assets/image/icsan_gwhtec.jpg" 
+                        alt="Chartered Institute of Personnel Management of Nigeria" 
+                        />
+                        <div class="font-semibold text-base">
+                            Accounting Technicians Scheme West Africa (ATSWA)
+                        </div>
+                        <div class="font-normal text-sm">
+                            Create stunning sales pages for your courses using dozens of eye-catching templates. 
+                            No design or development skills needed
+                        </div>
+                    </div>
+                </div>
+                <!-- Card 07 -->
+                <div class="flex h-auto w-full lg:w-[400px] rounded-2xl border-2 border-transparent shadow-xl bg-white p-8 justify-start items-start">
+                    <div class="flex flex-col items-start space-y-2">
+                        <img class="w-[50px] max-w-full" src="./public/assets/image/icsan_gwhtec.jpg" 
+                        alt="Chartered Institute of Personnel Management of Nigeria" 
+                        />
+                        <div class="font-semibold text-base">
+                            Institute of Chartered Secretaries and Administrators of Nigeria
+                        </div>
+                        <div class="font-normal text-sm">
+                            Create stunning sales pages for your courses using dozens of eye-catching templates. 
+                            No design or development skills needed
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Blogs -->
+    <section class="relative px-6 pt-4 lg:px-8 blogs lg:mb-50">
+        <div class="mx-auto max-w-7xl lg:flex lg:items-center lg:justify-between lg:gap-6 mb-6 mt-20">
+            <div class="w-full lg:w-4/3">
+                <h1 class="text-balance text-4xl font-semibold tracking-tight text-gray-900 sm:text-5xl">
+                    Featured blogs
+                </h1>
+            </div>
+            <div class="mt-5 lg:mt-0 lg:flex-shrink-0">
+                <button class="border-2 rounded-md px-12 py-3 bg-green-700 text-white">
+                    <a href="#" class="text-sm font-semibold capitalize">All blogs <span aria-hidden="true">→</span></a>
+                </button>
+            </div>
+        </div>
+        <div class="mx-auto max-w-7xl lg:flex lg:items-center lg:justify-between lg:gap-6 mb-6 mt-12">
+            <div class="grid grid-flow-row auto-rows-max gap-8 grid-cols-1 md:grid-cols-2 lg:grid-cols-3 pt-4">
+                <!-- Card 01 -->
+                <div class="flex h-auto w-full lg:w-[400px] rounded-t-lg border-2 border-transparent bg-white justify-start items-start">
+                    <a href="#" target="_blank">
+                        <img class="h-auto lg:h-[220px] w-full max-w-full rounded-t-lg" src="./public/assets/image/blog_banner2.jpg" 
+                            alt="Chartered Institute of Personnel Management of Nigeria" 
+                            />
+                        <div class="flex flex-col items-start space-y-2 p-6">
+                            <div class="font-semibold text-sm text-green-800 capitalize">
+                                From Specialization to MBA - A Learner's Path through gies college of business
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <!-- Card 02 -->
+                <div class="flex h-auto w-full lg:w-[400px] rounded-t-lg border-2 border-transparent bg-white justify-start items-start">
+                    <a href="#" target="_blank">
+                        <img class="h-auto lg:h-[220px] w-full max-w-full rounded-t-lg" src="./public/assets/image/blog_banner2.jpg" 
+                            alt="Chartered Institute of Personnel Management of Nigeria" 
+                            />
+                        <div class="flex flex-col items-start space-y-2 p-6">
+                            <div class="font-semibold text-sm text-green-800 capitalize">
+                                7 Questions with a bold innovator featuring Adarsh Lathika
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <!-- Card 03 -->
+                <div class="flex h-auto w-full lg:w-[400px] rounded-t-lg border-2 border-transparent bg-white justify-start items-start">
+                    <a href="#" target="_blank">
+                        <img class="h-auto lg:h-[220px] w-full max-w-full rounded-t-lg" src="./public/assets/image/blog_banner2.jpg" 
+                            alt="Chartered Institute of Personnel Management of Nigeria" 
+                            />
+                        <div class="flex flex-col items-start space-y-2 p-6">
+                            <div class="font-semibold text-sm text-green-800 capitalize">
+                                Tending online courses in business, computer science, tech, and more...
+                            </div>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="relative px-4 pt-6 lg:px-8 footer">
+    <div class="max-w-7xl mx-auto">
+        <div class="w-full mx-auto max-w-7xl lg:w-lg">
+        <p class="font-semibold tracking-tight text-white text-2xl sm:text-3xl">
+            <a href="#" target="_blank" aria-label="GetDev Homepage">GetDev</a>
+        </p>
+        </div>
+
+        <div class="flex flex-wrap justify-between mt-6 gap-6">
+        <div class="flex-1 min-w-[250px]">
+            <p class="text-white text-sm sm:text-base">
+            Build skills with courses, certificates, and programmes online from world-class trainers and institutions.
+            </p>
+            <p class="text-white text-sm mt-4">&copy; 2024 GetDev. All rights reserved.</p>
+        </div>
+
+        <!-- Pages Section -->
+        <div class="flex-1 min-w-[150px]">
+            <p class="text-white text-lg font-medium mb-2">Pages</p>
+            <ul class="space-y-2">
+            <li><a href="#" class="text-white text-sm hover:underline">About Us</a></li>
+            <li><a href="#" class="text-white text-sm hover:underline">Blog</a></li>
+            </ul>
+        </div>
+
+        <!-- Connect Section -->
+        <div class="flex-1 min-w-[150px]">
+            <p class="text-white text-lg font-medium mb-2">Connect</p>
+            <ul class="space-y-2">
+            <li><a href="#" class="text-white text-sm hover:underline">Contact Us</a></li>
+            </ul>
+        </div>
+
+        <!-- Legal Section -->
+        <div class="flex-1 min-w-[150px]">
+            <p class="text-white text-lg font-medium mb-2">Legal</p>
+            <ul class="space-y-2">
+            <li><a href="#" class="text-white text-sm hover:underline">Terms of Service</a></li>
+            <li><a href="#" class="text-white text-sm hover:underline">Honor Code</a></li>
+            <li><a href="#" class="text-white text-sm hover:underline">Privacy Policy</a></li>
+            </ul>
+        </div>
+        </div>
+    </div>
+    </section>
+
+    </body>
+        <script>
+            const menuToggle = document.getElementById('mobile-menu-toggle');
+            const menuClose = document.getElementById('mobile-menu-close');
+            const mobileMenu = document.getElementById('mobile-menu');
+
+            menuToggle.addEventListener('click', () => {
+                mobileMenu.classList.remove('hidden');
+            });
+
+            menuClose.addEventListener('click', () => {
+                mobileMenu.classList.add('hidden');
+            });
+        </script>
+</html>
